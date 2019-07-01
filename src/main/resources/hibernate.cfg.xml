@@ -1,0 +1,28 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@127.0.0.1:1521:XE</property>
+        <property name="hibernate.connection.username">demooracle</property>
+        <property name="hibernate.connection.password">demooracle</property>
+        <property name="hibernate.connection.pool_size">16</property>
+        <property name="show_sql">true</property>
+        <property name="dialect">org.hibernate.dialect.Oracle12cDialect</property>
+
+        <!-- The entity mappings: -->
+        <mapping class="com.ultraschemer.microweb.entity.AccessToken"/>
+        <mapping class="com.ultraschemer.microweb.entity.Configuration"/>
+        <mapping class="com.ultraschemer.microweb.entity.EmailAddress"/>
+        <mapping class="com.ultraschemer.microweb.entity.Person"/>
+        <mapping class="com.ultraschemer.microweb.entity.PhoneNumber"/>
+        <mapping class="com.ultraschemer.microweb.entity.Role"/>
+        <mapping class="com.ultraschemer.microweb.entity.User"/>
+        <mapping class="com.ultraschemer.microweb.entity.User_EmailAddress"/>
+        <mapping class="com.ultraschemer.microweb.entity.User_PhoneNumber"/>
+        <mapping class="com.ultraschemer.microweb.entity.User_Role"/>
+        <mapping class="com.ultraschemer.microweb.entity.LockControl"/>
+        <mapping class="com.ultraschemer.microweb.entity.Runtime"/>
+    </session-factory>
+</hibernate-configuration>
